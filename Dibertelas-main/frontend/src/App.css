@@ -1,0 +1,93 @@
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hide Emergent branding - multiple selectors to catch all variations */
+[href*="emergent"] img,
+a[href*="emergent.sh"],
+button[aria-label*="Emergent"],
+div[class*="emergent-badge"],
+.emergent-branding,
+div[style*="position: fixed"][style*="bottom"],
+button[style*="position: fixed"][style*="bottom"],
+a[style*="position: fixed"][style*="bottom"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Hide any fixed bottom-right elements that might be branding */
+body > div:last-child[style*="position: fixed"],
+body > a:last-child[style*="position: fixed"],
+body > button:last-child[style*="position: fixed"] {
+    display: none !important;
+}
+
+/* Image modal overlay */
+[data-state="open"] {
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0891b2;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0e7490;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Button hover effects */
+button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Image hover effects */
+img {
+    transition: transform 0.3s ease;
+}
+
+/* Link hover effects */
+a {
+    transition: color 0.2s ease;
+}
