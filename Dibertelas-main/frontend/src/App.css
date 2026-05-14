@@ -3,28 +3,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Hide Emergent branding - multiple selectors to catch all variations */
-[href*="emergent"] img,
-a[href*="emergent.sh"],
-button[aria-label*="Emergent"],
-div[class*="emergent-badge"],
-.emergent-branding,
-div[style*="position: fixed"][style*="bottom"],
-button[style*="position: fixed"][style*="bottom"],
-a[style*="position: fixed"][style*="bottom"] {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-}
-
-/* Hide any fixed bottom-right elements that might be branding */
-body > div:last-child[style*="position: fixed"],
-body > a:last-child[style*="position: fixed"],
-body > button:last-child[style*="position: fixed"] {
-    display: none !important;
-}
-
 /* Image modal overlay */
 [data-state="open"] {
     animation: fadeIn 0.2s ease-in-out;
