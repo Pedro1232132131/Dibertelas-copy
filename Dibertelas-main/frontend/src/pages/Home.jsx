@@ -65,7 +65,7 @@ const Home = () => {
       title: "Piscina de Luxo com Cascata"
     },
     {
-      url: "https://customer-assets.emergentagent.com/job_renovacao-piscinas/artifacts/rn5ob4cv_image.png",
+      url: "/design-paisagistico-premium.jpg",
       title: "Design Paisagístico Premium"
     },
     {
